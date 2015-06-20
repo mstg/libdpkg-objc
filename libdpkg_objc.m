@@ -7,6 +7,7 @@
 //
 
 #import "libdpkg_objc.h"
+NSString * dpkg_path = @"/usr/local/chariz/dpkg";
 
 @implementation libdpkg_objc
 - (void)dpkg_install:(NSString *)file completion:(completed)completion {
@@ -58,6 +59,27 @@
 		
 		completion(result);
 	}];
+}
+
+- (void)dpkg_download:(NSString *)stringurl name:(NSString *)name completion:(completed)completion {
+	struct dpkg_result result;
+	
+	NSURL  *url = [NSURL URLWithString:stringurl];
+	NSData *urlData = [NSData dataWithContentsOfURL:url];
+	if ( urlData ) {
+		[[NSFileManager defaultManager] createDirectoryAtPath:dpkg_path
+								  withIntermediateDirectories:YES
+												   attributes:nil
+														error:nil];
+
+		[urlData writeToFile:[dpkg_path stringByAppendingPathComponent:name] atomically:YES];
+		
+		result.result = 1;
+	} else {
+		result.result = 0;
+	}
+	
+	completion(result);
 }
 
 #pragma mark Tasks

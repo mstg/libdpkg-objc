@@ -19,4 +19,5 @@ typedef void(^completed)(struct dpkg_result result);
 - (void)dpkg_install:(NSString *)file completion:(completed)completion;
 - (void)dpkg_remove:(NSString *)name completion:(completed)completion;
 - (void)dpkg_package_installed:(NSString *)name completion:(completed)completion;
+- (void)dpkg_download:(NSString *)stringurl name:(NSString *)name completion:(completed)completion;
 @end
