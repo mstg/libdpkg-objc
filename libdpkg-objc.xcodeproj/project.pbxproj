@@ -1,0 +1,255 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		4569471E1B34EA7500A6D4E5 /* libdpkg_objc.h in Headers */ = {isa = PBXBuildFile; fileRef = 4569471D1B34EA7500A6D4E5 /* libdpkg_objc.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		456947201B34EA7500A6D4E5 /* libdpkg_objc.m in Sources */ = {isa = PBXBuildFile; fileRef = 4569471F1B34EA7500A6D4E5 /* libdpkg_objc.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		4569471A1B34EA7500A6D4E5 /* libdpkg-objc.dylib */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; includeInIndex = 0; path = "libdpkg-objc.dylib"; sourceTree = BUILT_PRODUCTS_DIR; };
+		4569471D1B34EA7500A6D4E5 /* libdpkg_objc.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = libdpkg_objc.h; sourceTree = "<group>"; };
+		4569471F1B34EA7500A6D4E5 /* libdpkg_objc.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = libdpkg_objc.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		456947171B34EA7500A6D4E5 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		456947111B34EA7500A6D4E5 = {
+			isa = PBXGroup;
+			children = (
+				4569471C1B34EA7500A6D4E5 /* libdpkg-objc */,
+				4569471B1B34EA7500A6D4E5 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		4569471B1B34EA7500A6D4E5 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				4569471A1B34EA7500A6D4E5 /* libdpkg-objc.dylib */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		4569471C1B34EA7500A6D4E5 /* libdpkg-objc */ = {
+			isa = PBXGroup;
+			children = (
+				4569471D1B34EA7500A6D4E5 /* libdpkg_objc.h */,
+				4569471F1B34EA7500A6D4E5 /* libdpkg_objc.m */,
+			);
+			path = "libdpkg-objc";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		456947181B34EA7500A6D4E5 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4569471E1B34EA7500A6D4E5 /* libdpkg_objc.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		456947191B34EA7500A6D4E5 /* dpkg-objc */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4569472E1B34EA7500A6D4E5 /* Build configuration list for PBXNativeTarget "dpkg-objc" */;
+			buildPhases = (
+				456947161B34EA7500A6D4E5 /* Sources */,
+				456947171B34EA7500A6D4E5 /* Frameworks */,
+				456947181B34EA7500A6D4E5 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "dpkg-objc";
+			productName = "libdpkg-objc";
+			productReference = 4569471A1B34EA7500A6D4E5 /* libdpkg-objc.dylib */;
+			productType = "com.apple.product-type.library.dynamic";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		456947121B34EA7500A6D4E5 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0630;
+				ORGANIZATIONNAME = "Mustafa Gezen";
+				TargetAttributes = {
+					456947191B34EA7500A6D4E5 = {
+						CreatedOnToolsVersion = 6.3.2;
+					};
+				};
+			};
+			buildConfigurationList = 456947151B34EA7500A6D4E5 /* Build configuration list for PBXProject "libdpkg-objc" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 456947111B34EA7500A6D4E5;
+			productRefGroup = 4569471B1B34EA7500A6D4E5 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				456947191B34EA7500A6D4E5 /* dpkg-objc */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		456947161B34EA7500A6D4E5 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				456947201B34EA7500A6D4E5 /* libdpkg_objc.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		4569472C1B34EA7500A6D4E5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "Developer ID Application: The trustee for the Brighton South Property Trust (N2LN9ZT493)";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		4569472D1B34EA7500A6D4E5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "Developer ID Application: The trustee for the Brighton South Property Trust (N2LN9ZT493)";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		4569472F1B34EA7500A6D4E5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "Developer ID Application: The trustee for the Brighton South Property Trust (N2LN9ZT493)";
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				EXECUTABLE_PREFIX = lib;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		456947301B34EA7500A6D4E5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "Developer ID Application: The trustee for the Brighton South Property Trust (N2LN9ZT493)";
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				EXECUTABLE_PREFIX = lib;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		456947151B34EA7500A6D4E5 /* Build configuration list for PBXProject "libdpkg-objc" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4569472C1B34EA7500A6D4E5 /* Debug */,
+				4569472D1B34EA7500A6D4E5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4569472E1B34EA7500A6D4E5 /* Build configuration list for PBXNativeTarget "dpkg-objc" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4569472F1B34EA7500A6D4E5 /* Debug */,
+				456947301B34EA7500A6D4E5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 456947121B34EA7500A6D4E5 /* Project object */;
+}
