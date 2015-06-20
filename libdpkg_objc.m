@@ -47,6 +47,8 @@
 		
 		NSString *errorOutput = [[NSString alloc] initWithData:((NSPipe *)task.standardError).fileHandleForReading.readDataToEndOfFile encoding:NSUTF8StringEncoding];
 		
+		NSLog(@"[Chariz] %@", errorOutput);
+		
 		completion(error, output, errorOutput);
 	};
 	
