@@ -8,16 +8,15 @@
 
 #import <Foundation/Foundation.h>
 
-@interface libdpkg_objc : NSObject {
-	char *_error;
-	int _result;
-	char *_output;
-}
+@interface libdpkg_objc : NSObject
 struct dpkg_result {
 	char *error;
 	int result;
 	char *output;
 };
 typedef void (^comp)(NSError *error, NSString *output, NSString *errorOutput);
-- (struct dpkg_result)dpkg_install:(NSString *)file;
+typedef void(^completed)(struct dpkg_result result);
+- (void)dpkg_install:(NSString *)file completion:(completed)completion;
+- (void)dpkg_remove:(NSString *)name completion:(completed)completion;
+- (void)dpkg_package_installed:(NSString *)name completion:(completed)completion;
 @end
