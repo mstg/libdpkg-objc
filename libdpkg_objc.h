@@ -8,7 +8,9 @@
 
 #import <Foundation/Foundation.h>
 
-@interface libdpkg_objc : NSObject
+@interface libdpkg_objc : NSObject {
+	NSString *_dpkgPath;
+}
 struct dpkg_result {
 	char *error;
 	int result;
@@ -20,4 +22,5 @@ typedef void(^completed)(struct dpkg_result result);
 - (void)dpkg_remove:(NSString *)name completion:(completed)completion;
 - (void)dpkg_package_installed:(NSString *)name completion:(completed)completion;
 - (void)dpkg_download:(NSString *)stringurl name:(NSString *)name completion:(completed)completion;
+- (NSString*)dpkg_path;
 @end

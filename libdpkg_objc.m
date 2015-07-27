@@ -7,9 +7,15 @@
 //
 
 #import "libdpkg_objc.h"
-NSString * dpkg_path = @"/usr/local/chariz/dpkg";
 
 @implementation libdpkg_objc
++ (libdpkg_objc*)alloc {
+	libdpkg_objc *inst = [super alloc];
+	inst->_dpkgPath = @"/usr/local/kdm";
+	
+	return inst;
+}
+
 - (void)dpkg_install:(NSString *)file completion:(completed)completion {
 	[self _launchDpkgTask:@[@"-i", file] completion:^(NSError *error, NSString *output, NSString *errorOutput) {
 		struct dpkg_result result;
@@ -33,7 +39,7 @@ NSString * dpkg_path = @"/usr/local/chariz/dpkg";
 		
 		if ([errorOutput containsString:@"Errors were encountered while processing"]) {
 			result.result = 0;
-		} else if (![errorOutput containsString:@"Errors were encountered while processing"] && [output containsString:@"Setting up"]) {
+		} else if (![errorOutput containsString:@"Errors were encountered while processing"] && [output containsString:@"Removing"]) {
 			result.result = 1;
 		}
 		
@@ -67,12 +73,12 @@ NSString * dpkg_path = @"/usr/local/chariz/dpkg";
 	NSURL  *url = [NSURL URLWithString:stringurl];
 	NSData *urlData = [NSData dataWithContentsOfURL:url];
 	if ( urlData ) {
-		[[NSFileManager defaultManager] createDirectoryAtPath:dpkg_path
+		[[NSFileManager defaultManager] createDirectoryAtPath:self->_dpkgPath
 								  withIntermediateDirectories:YES
 												   attributes:nil
 														error:nil];
 
-		[urlData writeToFile:[dpkg_path stringByAppendingPathComponent:name] atomically:YES];
+		[urlData writeToFile:[self->_dpkgPath stringByAppendingPathComponent:name] atomically:YES];
 		
 		result.result = 1;
 	} else {
@@ -80,6 +86,10 @@ NSString * dpkg_path = @"/usr/local/chariz/dpkg";
 	}
 	
 	completion(result);
+}
+
+- (NSString*)dpkg_path {
+	return self->_dpkgPath;
 }
 
 #pragma mark Tasks
